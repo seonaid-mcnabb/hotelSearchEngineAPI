@@ -13,13 +13,11 @@ data class UserSearchInput(
 object HotelSearchRequestMother {
     private val json = Json { prettyPrint = true }
 
-    fun randomUserSearchInputWithAllParams(location: String, checkinDate: String, checkoutDate: String, priceRange: Array<Int>): String {
-        val userSearchInput = UserSearchInput(location, checkinDate, checkoutDate, priceRange)
-        return json.encodeToString(userSearchInput)
-    }
-
-    fun randomUserSearchInputWithOnlyLocation(location: String): String {
-        val userSearchInput = UserSearchInput(location)
+    fun randomUserSearchInput(): String {
+        val userSearchInput = UserSearchInput( location = "Paris",
+            checkinDate = "2024-12-01",
+            checkoutDate = "2024-12-14",
+            priceRange = arrayOf(100, 200))
         return json.encodeToString(userSearchInput)
     }
 }

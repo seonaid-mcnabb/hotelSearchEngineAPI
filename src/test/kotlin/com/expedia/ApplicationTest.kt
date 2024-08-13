@@ -26,12 +26,7 @@ class ApplicationTest {
             assertEquals("Hotel Search Engine API by Seonaid McNabb", bodyAsText())
         }
 
-        val mockHotelSearchRequest = HotelSearchRequestMother.randomUserSearchInputWithAllParams(
-            location = "Paris",
-            checkinDate = "2024-12-01",
-            checkoutDate = "2024-12-14",
-            priceRange = arrayOf(100, 200)
-        )
+        val mockHotelSearchRequest = HotelSearchRequestMother.randomUserSearchInput()
 
         val response = client.post("/search"){
             contentType(ContentType.Application.Json)
