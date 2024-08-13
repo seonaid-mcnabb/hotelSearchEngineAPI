@@ -8,7 +8,7 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import java.time.LocalDate
 
-
+// Necessary to implement because the serializer functionality does not currently work for LocalDate type
 object LocalDateSerializer : KSerializer<LocalDate> {
     override val descriptor: SerialDescriptor =
         PrimitiveSerialDescriptor("LocalDate", PrimitiveKind.STRING)
@@ -22,13 +22,13 @@ object LocalDateSerializer : KSerializer<LocalDate> {
     }
 }
 
-
+// The search request input currently allows any combination of the following params (hence, making them nullable)
 @Serializable
 data class HotelSearchRequest(
-    val location: String,
+    val location: String? = null,
     @Serializable(with = LocalDateSerializer::class)
-    val checkinDate: LocalDate,
+    val checkinDate: LocalDate? = null,
     @Serializable(with = LocalDateSerializer::class)
-    val checkoutDate: LocalDate,
-    val priceRange: Array<Int>
+    val checkoutDate: LocalDate? = null,
+    val priceRange: Array<Int>? = null
 )

@@ -26,13 +26,12 @@ class ApplicationTest {
             assertEquals("Hotel Search Engine API by Seonaid McNabb", bodyAsText())
         }
 
-        val mockHotelSearchRequest = HotelSearchRequestMother.randomUserSearchInput(
-            location = "Madrid",
+        val mockHotelSearchRequest = HotelSearchRequestMother.randomUserSearchInputWithAllParams(
+            location = "Paris",
             checkinDate = "2024-12-01",
             checkoutDate = "2024-12-14",
             priceRange = arrayOf(100, 200)
         )
-
 
         val response = client.post("/search"){
             contentType(ContentType.Application.Json)
@@ -42,4 +41,7 @@ class ApplicationTest {
         assertEquals(HttpStatusCode.OK, response.status)
         assertEquals("Received search request for location: Madrid", response.bodyAsText())
     }
+
+    //TODO: Test that the API returns a list of hotels ordered by their rating, with highest rated appearing first
+
 }
