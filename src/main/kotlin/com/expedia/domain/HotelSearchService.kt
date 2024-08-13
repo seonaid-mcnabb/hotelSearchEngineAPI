@@ -1,4 +1,4 @@
-package domain
+package com.expedia.domain
 
 import com.expedia.interfaces.HotelSearchInterface
 import com.expedia.models.HotelSearchResponse

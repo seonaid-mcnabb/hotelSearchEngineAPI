@@ -1,4 +1,4 @@
-package domain
+package com.expedia.domain
 
 import com.expedia.models.Hotel
 import com.expedia.models.Location

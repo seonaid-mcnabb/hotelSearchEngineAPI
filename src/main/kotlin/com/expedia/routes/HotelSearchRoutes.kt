@@ -1,6 +1,6 @@
 package com.expedia.routes
 import com.expedia.models.*
-import domain.HotelSearchService
+import com.expedia.domain.HotelSearchService
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.request.*
@@ -23,7 +23,7 @@ fun Route.hotelSearchRouting() {
 
             val hotelSearchResults = hotelSearchService.getHotelsByLocation(hotelSearchRequestParams.location)
 
-            call.respondText("Some hotels you might be interested in: ${hotelSearchResults}", status = HttpStatusCode.OK)
+            call.respondText("Some hotels you might be interested in: ${hotelSearchResults.hotels}", status = HttpStatusCode.OK)
         }
     }
 }
