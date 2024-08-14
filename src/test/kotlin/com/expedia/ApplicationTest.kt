@@ -37,6 +37,6 @@ class ApplicationTest {
         assertEquals("Received search request for location: Madrid", response.bodyAsText())
     }
 
-    //TODO: Test that the API returns a list of hotels ordered by their rating, with highest rated appearing first
+    //TODO: Test that the sorter works correctly
 
 }
