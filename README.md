@@ -4,7 +4,7 @@ Hotel Search API
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)
-- [Building the Project](#building-the-project)
+- [Building the Project](#building-and-running-the-project)
 - [Project Structure](#project-structure)
 - [Testing](#testing)
 
@@ -43,7 +43,7 @@ For the purpose of this assessment, a mock data source is used for Hotel Data. T
 have an interface that will define the contracts for any services that perform searches. Search and business
 logic is contained in domain/Hotel Search Service, and the models package contains the relevant data models
 for the search service, as well as the data models for requests and responses to and from the service. 
-s
+
 The project uses the KTOR framework to create the API server, and the routes are contained in routes folder.
 
 Currently, this project takes a user search input and filters hotels by the input location, returning a list
