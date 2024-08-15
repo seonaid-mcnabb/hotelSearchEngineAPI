@@ -12,7 +12,7 @@ Hotel Search API
 
 IntelliJ IDE installed, with gradle plugin, and Amazon Corretto 11. Postman desktop version.
 
-## Building and running the Project
+## Building and running the project
 Open the project using IntelliJ and automatic build should trigger. Assure that your project settings
 are correct, opening Project Structure -> Project, and assuring that the SDK is set to Amazon Corretto
 11.0.24 or another compatible version.

@@ -67,12 +67,12 @@ class MockHotelDataSource {
 
         hotels = listOf(
             // Paris Hotels
+            Hotel("6", "Hotel Paris 6", "Disappointing experience in Paris", location1, 230, "image6.jpg", badMockReviews),
             Hotel("1", "Hotel Paris 1", "A great hotel in Paris", location1, 200, "image1.jpg", goodMockReviews),
             Hotel("2", "Hotel Paris 2", "Another great hotel in Paris", location1, 250, "image2.jpg", goodMockReviews),
             Hotel("3", "Hotel Paris 3", "Comfortable and convenient in Paris", location1, 180, "image3.jpg", mediocreMockReviews),
             Hotel("4", "Hotel Paris 4", "Average stay in Paris", location1, 220, "image4.jpg", mediocreMockReviews),
             Hotel("5", "Hotel Paris 5", "Not recommended in Paris", location1, 210, "image5.jpg", badMockReviews),
-            Hotel("6", "Hotel Paris 6", "Disappointing experience in Paris", location1, 230, "image6.jpg", badMockReviews),
 
             // New York Hotels
             Hotel("7", "Hotel NYC 1", "A great hotel in New York", location2, 300, "image7.jpg", goodMockReviews),

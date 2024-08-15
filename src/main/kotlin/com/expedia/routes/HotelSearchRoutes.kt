@@ -21,7 +21,7 @@ fun Route.hotelSearchRouting() {
 
             val hotelSearchService = HotelSearchService()
 
-            val hotelSearchResults = hotelSearchService.getHotelsByLocation(hotelSearchRequestParams.location)
+            val hotelSearchResults = hotelSearchService.getHotelsFromUserInput(hotelSearchRequestParams)
 
             call.respondText("Some hotels you might be interested in: ${hotelSearchResults.hotels}", status = HttpStatusCode.OK)
         }
