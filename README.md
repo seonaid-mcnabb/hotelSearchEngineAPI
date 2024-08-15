@@ -39,9 +39,10 @@ Results:
 
 
 ## Project structure
-For the purpose of this assessment, a mock data source is used for Hotel Data. The project is organized to
-have an interface that will define the contracts for any services that perform searches. Search and business
-logic is contained in domain/Hotel Search Service, and the models package contains the relevant data models
+For the purpose of this assessment, an in-memory mock data source is used for Hotel Data.
+
+The project is organized to have an interface that will define the contracts for any services that perform searches.
+Search logic is contained in domain/Hotel Search Service/Hotel Fitler, and the models package contains the relevant data models
 for the search service, as well as the data models for requests and responses to and from the service. 
 
 The project uses the KTOR framework to create the API server, and the routes are contained in routes folder.
@@ -55,8 +56,9 @@ src/ <br/>
 └── kotlin/ <br/>
 └── com/expedia/ <br/>
 ├── domain/ <br/>
-│   ├── HotelSearchService.kt <br/>
-│   └── MockHotelDataSource.kt <br/>
+│   ├── HotelFilter <br/>
+│   └── HotelSearchService.kt < <br/>
+|    └── MockHotelDataSource.kt <br/>
 ├── interfaces/ <br/>
 │   └── HotelSearchInterface.kt <br/>
 ├── models/ <br/>
@@ -74,3 +76,7 @@ src/ <br/>
 
 
 ## Testing
+Basic testing has been added for now, assuring that the API responds correctly when receiving an adequate
+search request. The hotel filter functionality has also been tested to assure that hotels are sorted and 
+returned by review rating, starting with the highest rated. Future improvements will include adding error handling
+and testing for edge cases (ie. malformed search request, search requests that return no results, etc.)
